@@ -217,3 +217,5 @@ nnoremap <c-h> :call DisableHighlight()<cr>
 function! DisableHighlight()
     set nohlsearch
 endfunc
+
+set cursorline
