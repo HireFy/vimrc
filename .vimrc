@@ -199,3 +199,21 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 set showmatch
 "vim系统粘贴
 set clipboard+=unnamed
+
+" 当光标一段时间保持不动了，就禁用高亮
+highlight Search ctermbg=yellow ctermfg=black 
+highlight IncSearch ctermbg=black ctermfg=yellow 
+highlight MatchParen cterm=underline ctermbg=NONE ctermfg=NONE
+
+autocmd cursorhold * set nohlsearch
+" 当输入查找命令时，再启用高亮
+noremap n :set hlsearch<cr>n
+noremap N :set hlsearch<cr>N
+noremap / :set hlsearch<cr>/
+noremap ? :set hlsearch<cr>?
+noremap * *:set hlsearch<cr>
+"按下ctrl + h关闭高亮
+nnoremap <c-h> :call DisableHighlight()<cr>
+function! DisableHighlight()
+    set nohlsearch
+endfunc
