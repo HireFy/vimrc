@@ -219,4 +219,3 @@ function! DisableHighlight()
 endfunc
 
 set cursorline
-hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white  
