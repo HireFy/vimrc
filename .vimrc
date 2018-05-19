@@ -82,6 +82,10 @@ Plugin 'Yggdroot/indentLine'
 "vim commentary
 Plugin 'tpope/vim-commentary'
 
+"vim autoformat
+Plugin 'Chiel92/vim-autoformat'
+
+
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
@@ -280,10 +284,16 @@ set smartcase
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-"设置默认tab 4 空格
+" 默认tab 4 空格
 set ts=4  
 set expandtab  
 set autoindent  
 
-" <c-q> 关闭当前窗口
-map <c-q> :hide<CR>
+" autoformat setting
+noremap <F3> :Autoformat<CR>
+" To disable the fallback to vim's indent file, retabbing and removing trailing whitespace, set the following variables to 0.
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
+" 保存时自动格式化
+au BufWrite * :Autoformat
