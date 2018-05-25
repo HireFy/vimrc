@@ -297,3 +297,7 @@ let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
 " 保存时自动格式化
 au BufWrite * :Autoformat
+
+" NERDTree config
+ map <F2> :NERDTreeToggle<CR>
+ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
