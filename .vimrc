@@ -85,11 +85,14 @@ Plugin 'tpope/vim-commentary'
 "vim autoformat
 Plugin 'Chiel92/vim-autoformat'
 
+"NerdTree
+Plugin 'scrooloose/nerdtree'
+
+"NerdTree git plugin
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/indentpython.vim'
 
